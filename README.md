@@ -3,10 +3,10 @@
 Just another CSV parser
 
 [![Build Status](https://travis-ci.org/mjacobus/koine-csv.svg)](https://travis-ci.org/mjacobus/koine-csv)
-[![Code Coverage](https://scrutinizer-ci.com/g/mjacobus/koine-csv/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mjacobus/koine-csv/?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/mjacobus/koine-csv/badge.svg?branch=master)](https://coveralls.io/github/mjacobus/koine-csv?branch=master)
 [![Code Climate](https://codeclimate.com/github/mjacobus/koine-csv/badges/gpa.svg)](https://codeclimate.com/github/mjacobus/koine-csv)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mjacobus/koine-csv/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mjacobus/koine-csv/?branch=master)
-[![Dependency Status](https://gemnasium.com/mjacobus/koine-csv.svg)](https://gemnasium.com/mjacobus/koine-csv)
+[![Build Status](https://travis-ci.org/mjacobus/koine-csv.svg?branch=master)](https://travis-ci.org/mjacobus/koine-csv)
 [![Gem Version](https://badge.fury.io/rb/koine-csv.svg)](https://badge.fury.io/rb/koine-csv)
 
 ## Installation
