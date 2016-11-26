@@ -1,8 +1,13 @@
 # Koine::Csv
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/koine/csv`. To experiment with that code, run `bin/console` for an interactive prompt.
+Just another CSV parser
 
-TODO: Delete this and the text above, and describe your gem
+[![Build Status](https://travis-ci.org/mjacobus/koine-csv.svg)](https://travis-ci.org/mjacobus/koine-csv)
+[![Code Coverage](https://scrutinizer-ci.com/g/mjacobus/koine-csv/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mjacobus/koine-csv/?branch=master)
+[![Code Climate](https://codeclimate.com/github/mjacobus/koine-csv/badges/gpa.svg)](https://codeclimate.com/github/mjacobus/koine-csv)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mjacobus/koine-csv/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mjacobus/koine-csv/?branch=master)
+[![Dependency Status](https://gemnasium.com/mjacobus/koine-csv.svg)](https://gemnasium.com/mjacobus/koine-csv)
+[![Gem Version](https://badge.fury.io/rb/koine-csv.svg)](https://badge.fury.io/rb/koine-csv)
 
 ## Installation
 
