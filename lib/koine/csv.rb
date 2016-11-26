@@ -2,6 +2,6 @@ require "koine/csv/version"
 
 module Koine
   module Csv
-    # Your code goes here...
+    autoload :CsvParser, 'koine/csv/csv_parser'
   end
 end
