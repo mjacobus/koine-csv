@@ -22,7 +22,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+parser = Koine::Csv::CsvParser.new(column_separator: ";")
+
+content = "a;b\nc;d\n"
+
+result = parser.parse(content)
+
+# result = [
+#   ['a', 'b'],
+#   ['c', 'd'],
+# ]
+```
 
 ## Development
 
