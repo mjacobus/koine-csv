@@ -11,6 +11,11 @@ module Koine
         assert_equal ';', subject.send(:options)[:col_sep]
       end
 
+      test "can cange default separator" do
+        parser = CsvParser.new(column_separator: ',')
+        assert_equal ',', parser.send(:options)[:col_sep]
+      end
+
       test "can parse content" do
         content = "a;b\nc;d\n"
 
@@ -19,7 +24,7 @@ module Koine
           ['c', 'd'],
         ]
 
-        actual = CsvParser.new.parse(content)
+        actual = subject.parse(content)
 
         assert_equal expected, actual
       end
@@ -31,7 +36,7 @@ module Koine
 
         collected = []
 
-        CsvParser.new.parse(content) do |row|
+        subject.parse(content) do |row|
           collected.push(row[0])
         end
 
