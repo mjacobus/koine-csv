@@ -6,14 +6,16 @@ module Koine
       def initialize(options = {})
         defaults = { column_separator: ";" }
         options = defaults.merge(options)
-        @options = { col_sep: options[:column_separator] }
+        @parser_options = { col_sep: options[:column_separator] }
       end
 
       def parse(contents, &block)
-        CSV.parse(contents, options, &block)
+        CSV.parse(contents, parser_options, &block)
       end
 
-      attr_reader :options
+      protected
+
+      attr_reader :parser_options
     end
   end
 end

@@ -40,6 +40,23 @@ result = parser.parse(content)
 # ]
 ```
 
+### Mapped Columns
+
+```ruby
+parser = MappedColumnsParser.new({
+  column_names: [:name, :last_name]
+})
+
+content = "jon;doe\njohn;travolta\n"
+
+result = parser.parse(content)
+
+# result = [
+#   { name: 'jon', last_name: 'doe'},
+#   { name: 'john', last_name: 'travolta'},
+# ]
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
