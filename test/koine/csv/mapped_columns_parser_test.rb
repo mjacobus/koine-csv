@@ -9,6 +9,10 @@ module Koine
         })
       end
 
+      test "is a csv parser" do
+        assert subject.is_a?(CsvParser)
+      end
+
       test "defaults column separator to ';'" do
         assert_equal ';', subject.send(:parser_options)[:col_sep]
       end

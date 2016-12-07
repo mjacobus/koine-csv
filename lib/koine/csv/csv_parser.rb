@@ -15,6 +15,10 @@ module Koine
 
       protected
 
+      def column_separator
+        parser_options[:col_sep]
+      end
+
       attr_reader :parser_options
     end
   end

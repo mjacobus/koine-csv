@@ -30,14 +30,14 @@ Or install it yourself as:
 ```ruby
 parser = Koine::Csv::CsvParser.new(column_separator: ";")
 
-content = "a;b\nc;d\n"
+contents = "a;b\nc;d\n"
 
-result = parser.parse(content)
+result = parser.parse(contents)
 
-# result = [
-#   ['a', 'b'],
-#   ['c', 'd'],
-# ]
+#  result = [
+#    ['a', 'b'],
+#    ['c', 'd'],
+#  ]
 ```
 
 ### Mapped Columns
@@ -47,14 +47,32 @@ parser = MappedColumnsParser.new({
   column_names: [:name, :last_name]
 })
 
-content = "jon;doe\njohn;travolta\n"
+contents = "jon;doe\njohn;travolta\n"
 
-result = parser.parse(content)
+result = parser.parse(contents)
 
-# result = [
-#   { name: 'jon', last_name: 'doe'},
-#   { name: 'john', last_name: 'travolta'},
-# ]
+#  result = [
+#    { name: 'jon', last_name: 'doe'},
+#    { name: 'john', last_name: 'travolta'},
+#  ]
+```
+
+### Named Columns
+
+When the CSV already comes with titles
+
+```ruby
+parser = NamedColumnsParser.new
+
+contents = "jon;doe\njohn;travolta\n"
+
+result = parser.parse(contents)
+
+#  result = [
+#    { 'name' => 'jon',  'last_name' => 'doe'},
+#    { 'name' => 'john', 'last_name' => 'travolta'},
+#  ]
+
 ```
 
 ## Development
