@@ -14,6 +14,7 @@ module Koine
       test "can cange default separator" do
         parser = CsvParser.new(column_separator: ',')
         assert_equal ',', parser.send(:parser_options)[:col_sep]
+        assert_equal ',', parser.send(:column_separator)
       end
 
       test "can parse content" do
