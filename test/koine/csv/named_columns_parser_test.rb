@@ -4,7 +4,7 @@ module Koine
   module Csv
     class NamedColumnsParserTest < TestCase
       def subject
-        NamedColumnsParser.new(column_separator: ';')
+        NamedColumnsParser.new(col_sep: ';')
       end
 
       test "is a csv parser" do
@@ -15,23 +15,27 @@ module Koine
         assert_equal ';', subject.send(:parser_options)[:col_sep]
       end
 
-      test "can cange default separator" do
+      test "can change default separator" do
         parser = NamedColumnsParser.new(
-          column_separator: ',',
+          col_sep: ',',
         )
         assert_equal ',', parser.send(:parser_options)[:col_sep]
       end
 
       test "can parse content" do
+        subject = NamedColumnsParser.new(
+          quote_char: "'"
+        )
+
         contents = <<-CSV
-name;"last_name"
-jon;doe
+name;last_name
+jon;'doe da silva'
 name;last_name
 john;travolta
         CSV
 
         expected = [
-          { 'name' => 'jon', 'last_name' => 'doe'},
+          { 'name' => 'jon', 'last_name' => 'doe da silva'},
           { 'name' => 'name', 'last_name' => 'last_name'},
           { 'name' => 'john', 'last_name' => 'travolta'},
         ]

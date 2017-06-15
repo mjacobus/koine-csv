@@ -4,7 +4,8 @@ module Koine
   module Csv
     class NamedColumnsParser < CsvParser
       def parse(contents, &block)
-        csv = CSV.parse(contents, headers: true, col_sep: column_separator)
+        options = parser_options.merge({ headers: true })
+        csv = CSV.parse(contents, options)
         column_names = csv.headers
         collection = []
 

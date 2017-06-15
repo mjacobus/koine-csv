@@ -28,7 +28,7 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-parser = Koine::Csv::CsvParser.new(column_separator: ";")
+parser = Koine::Csv::CsvParser.new(col_sep: ";")
 
 contents = "a;b\nc;d\n"
 
@@ -43,7 +43,7 @@ result = parser.parse(contents)
 ### Mapped Columns
 
 ```ruby
-parser = MappedColumnsParser.new({
+parser = Koine::Ccsv::MappedColumnsParser.new({
   column_names: [:name, :last_name]
 })
 
@@ -64,7 +64,7 @@ When the CSV already comes with titles
 ```ruby
 parser = NamedColumnsParser.new
 
-contents = "jon;doe\njohn;travolta\n"
+contents = "name;last_name\njon;doe\njohn;travolta\n"
 
 result = parser.parse(contents)
 

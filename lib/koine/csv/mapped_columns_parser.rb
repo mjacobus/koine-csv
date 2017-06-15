@@ -6,8 +6,9 @@ module Koine
       attr_reader :column_names
 
       def initialize(options = {})
-        super(options)
         @column_names = options.fetch(:column_names)
+        options.delete(:column_names)
+        super(options)
       end
 
       def parse(contents, &block)

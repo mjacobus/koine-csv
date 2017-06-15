@@ -1,12 +1,12 @@
-require "csv"
+require 'csv'
 
 module Koine
   module Csv
     class CsvParser
       def initialize(options = {})
-        defaults = { column_separator: ";" }
+        defaults = { col_sep: ';' }
         options = defaults.merge(options)
-        @parser_options = { col_sep: options[:column_separator] }
+        @parser_options = options
       end
 
       def parse(contents, &block)
@@ -14,10 +14,6 @@ module Koine
       end
 
       protected
-
-      def column_separator
-        parser_options[:col_sep]
-      end
 
       attr_reader :parser_options
     end

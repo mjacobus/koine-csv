@@ -17,9 +17,9 @@ module Koine
         assert_equal ';', subject.send(:parser_options)[:col_sep]
       end
 
-      test "can cange default separator" do
+      test "can change default separator" do
         parser = MappedColumnsParser.new(
-          column_separator: ',',
+          col_sep: ',',
           column_names: [:name, :last_name]
         )
         assert_equal ',', parser.send(:parser_options)[:col_sep]
